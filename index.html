@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wish from WDF 4190</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        position: relative;
+        font-family: 'Kite One', sans-serif;
+    }
+
+    .container{
+        width: 1200px;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: -5px -2px 5px rgba(0,0,0,0.5), 5px -2px 5px rgba(0,0,0,0.5);
+        position: absolute;
+    }
+
+    .nav{
+        background: #997C42;
+        color:#fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .favicon{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header{
+        background-image: url(img/img1.jpg);
+        background-repeat: no-repeat;
+        /*background-attachment: fixed;*/
+        background-size: cover;
+        height: 300px;
+        border: 1px solid #997C42;
+    }
+
+    .header span{
+        height: 298px;
+        padding: 15px;
+        color:white;
+
+        border-top:none;
+        border-bottom: none;
+        border-left: 5px solid #997C42;
+        opacity: 0.5;
+
+        display: inline-block;
+        z-index: -2;
+    }
+    .header p{
+        color:gold;
+        font-size: 3rem;
+        text-shadow: -5px 5px 5px rgba(0,0,0,0.5);
+
+        margin-top: -15%;
+        margin-left: 30%;
+        transform: translate(-15%,30%);
+        z-index: 10;
+    }
+
+    .png{
+        background-image: url(img/bg.jpg);
+        background-size: cover;
+        width: 200px;
+        height:350px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin:5px 0;
+    }
+
+     .img{
+        width: 50px;
+        height: 50px;
+        animation: animate 0.5s linear infinite;
+    }
+
+     @keyframes animate {
+         from {
+             -webkit-transform: rotate(0deg);
+         } to {
+               -webkit-transform: rotate(360deg);
+           }
+     }
+
+     .wish{
+         float: right;
+         padding: 10px;
+     }
+
+     .wish1, .wish3{
+         width: 950px;
+         height: 100px;
+         background-color:#000;
+         color: #997C42;
+         margin:10px 0;
+
+         text-align: center;
+         font-size: 1.2rem;
+
+         border: 2px solid #997C42;
+        border-radius: 10px 10px 10px 50px;
+         box-shadow: -5px 2px 5px rgba(0,0,0,0.4);
+
+         display:flex;
+         align-items: center;
+     }
+
+    .wish2{
+        width: 950px;
+        height: 100px;
+        background-color:#fff;
+        color: #997C42;
+        margin:10px 0;
+
+        text-align: center;
+        font-size: 1.2rem;
+
+        border: 2px solid #997C42;
+        border-radius: 10px 10px 10px 50px;
+        box-shadow: -5px 2px 5px rgba(0,0,0,0.4);
+
+        display:flex;
+        align-items: center;
+    }
+
+
+    .img-wish{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border:2px groove #997C42;
+        margin-right: 10px;
+    }
+
+    .footer{
+        width: 1200px;
+        padding: 30px;
+        background-color: #997C42;
+        color:#fff;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .ft1{
+        float: left;
+    }
+
+    .ft1 a{
+        text-decoration: none;
+        color:white;
+        font-size: 1rem;
+    }
+
+    .ft1 a:hover{
+        color:black;
+        font-weight: bold;
+    }
+
+    .ft2{
+        font-size: 1rem;
+    }
+
+    .ft3{
+        float: right;
+        margin-top: -45px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    @media  (max-width: 768px) {
+
+        /*body{*/
+        /*    overflow: auto;*/
+        /*}*/
+        .header {
+            width: 760px;
+            height:300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .header span{
+           display: none;
+        }
+
+         .wish{
+             width:768px;
+
+         }
+         .footer::after{
+             content: '!Please Change desktop mode, you can see full width of our page.';
+         }
+
+    }
+
+    /*navbar bgcolor change*/
+
+
+    .mor{
+        background: linear-gradient(45deg, #010f26, skyblue);
+    }
+
+    .morn{
+        background: linear-gradient(-45deg, #fff, skyblue);
+    }
+
+    .aft{
+        background:linear-gradient(-45deg,skyblue,yellow);
+    }
+
+    .eve{
+        background: linear-gradient(45deg,skyblue,coral);
+    }
+
+    .eve1{
+        background: linear-gradient(45deg, #592d04,#010f26 );
+    }
+
+
+</style>
+
+<body>
+<div class="container">
+    <div id="nav" class="nav">
+       <div class="id"><a  href="#"><img src="img/favicon.png" class="favicon" alt="fav" align="center"></a>
+            Wish form WDF 4190
+        </div>
+
+        <div class="greet">
+            <p id="greet"></p>
+        </div>
+    </div>
+
+    <div class="header">
+       <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+       <p> Happy <b id="birth" class="birth" data-target="">19</b> Year Birthday Anniversary.</p>
+    </div>
+
+    <div class="content">
+        <div class ="png">
+           <img src="img/blade1.png" id="img" class="img" alt="blade">
+        </div>
+
+        <div class="wish">
+            <div class="wish1">
+                I wish you a fulfilling life of joy, happiness, and success as you spread your knowledge. Happy birthday to an awesome teacher!
+                <img src="img/4.jpeg" class="img-wish" alt="img4">
+            </div>
+
+            <div class="wish2">
+              I wish Birthdays bring for you new joy, new discovery and new opportunity. Accept my warmest congratulations on your milestone birthday.
+                <img src="img/9.jpg" class="img-wish" alt="img9">
+            </div>
+
+            <div class="wish3">
+                I wanted to use this opportunity to thank you for all you have taught me since we met.
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="ft1"> <a href="#"> << Back to Main Page </a></div>
+           <div class="ft2"> Copyright &copy  <span id="year"></span> | Wish from WDF Batch -4</div>
+            <div class = "ft3">
+                <div class="time">
+                    <i id="hr">--</i>:
+                    <i id="min">--</i>:
+                    <i id="sec">--</i>
+                </div>
+
+                <div class="date">
+                    <i id="weekday">---</i> <br/>
+
+                    <i id="day">--</i> /
+                    <i id="month">--</i> /
+                    <i id="yr">--</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    //DOB Calculate
+    let dob = new Date("8/18/1991");
+
+    let timedifference = Date.now()-dob.getTime();
+    // console.log(Date.now());
+    // console.log(dob.getTime());
+    // console.log(timedifference);
+
+    let dateformat = new Date(timedifference);
+    // console.log(dateformat);
+
+    let dateyear = dateformat.getUTCFullYear();
+    // console.log(dateyear);
+
+    let age = Math.abs(dateyear - 1970);
+    // console.log(age);
+
+    document.getElementById('birth').innerText = age;
+
+   // footer date and time
+    function update() {
+    let now = new Date();
+    // console.log(date);
+
+        let weekday = now.getDay();
+        let dates = now.getDate();
+        let month = now.getMonth();
+        let year = now.getUTCFullYear();
+        // console.log(dates);
+
+        let weekdays  = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','TUESDAY','FRIDAY','SATURDAY'];
+        let months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+        let second = now.getSeconds();
+
+        if(hour < 10) {
+            hour = "0" + hour;
+        }
+
+        if(minute < 10){
+            minute = "0" + minute;
+        }
+
+        if(second < 10){
+            second = "0" + second;
+        }
+
+        if(dates < 10){
+            dates = "0" + dates;
+        }
+
+        if(hour >= 00){
+            document.getElementById('greet').innerText = "Good Morning Sir";
+            nav.classList.add('mor');
+        }
+
+        if(hour >= 05){
+            document.getElementById('greet').innerText = "Good Morning Sir";
+            nav.classList.add('morn');
+        }
+
+        if(hour >= 12){
+            document.getElementById('greet').innerText = "Good Afternoon Sir";
+            nav.classList.add('aft');
+        }
+
+        if(hour >= 16){
+            document.getElementById('greet').innerText = "Good Evening Sir";
+            nav.classList.add('eve');
+        }
+
+        if(hour >= 19){
+            document.getElementById('greet').innerText = "Good Evening Sir";
+            nav.classList.add('eve1');
+        }
+
+        document.getElementById('hr').innerText = hour;
+        document.getElementById('min').innerText = minute;
+        document.getElementById('sec').innerText = second;
+
+        document.getElementById('day').innerText = dates;
+        document.getElementById('yr').innerText = year;
+
+        let currentweek = weekdays[now.getDay()];
+        document.getElementById('weekday').innerText = currentweek;
+
+        let currentmonth = months[now.getMonth()];
+        document.getElementById('month').innerText = currentmonth;
+
+        document.getElementById('year').innerText = year;
+    }
+    setInterval(update,1000);
+
+</script>
+</body>
+</html>
